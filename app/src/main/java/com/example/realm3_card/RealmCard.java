@@ -10,11 +10,13 @@ public class RealmCard {
 
 
 
-    public RealmCard(int imageId,String title,String content,String meaning){
+
+    public RealmCard(int number,String texts){
         this.number =number;
         this.texts = texts;
 
     }
+
 
 }
 

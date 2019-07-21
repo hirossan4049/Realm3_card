@@ -38,13 +38,16 @@ public class RealmCardAdapter extends ArrayAdapter<RealmCard> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.realm_card,null);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
+        }else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
+
         final RealmCard item=getItem(position);
 
-//        if (item != null){
-//            viewHolder.text.setText(item.texts);
-//            viewHolder.number.setText(item.number);
-//        }
+        if (item != null){
+            viewHolder.text.setText(item.texts);
+            viewHolder.number.setText(item.number);
+        }
         return convertView;
 
     }
